@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./tailwind-compiled.css" rel="stylesheet">
+  <style>
+        .transition-opacity {
+            transition: opacity 1s ease;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        .typing-text::after {
+            content: '|';
+            display: inline-block;
+            margin-left: 2px;
+            animation: blink-cursor 1s step-end infinite;
+        }
+
+        @keyframes blink-cursor {
+            0%, 100% 
+            {
+                opacity: 1;
+            }
+            50% 
+            {
+                opacity: 0;
+            }
+}
+  </style>
+</head>
+<body>
+    <section class="py-[80px]">
+        <div class="flex flex-col ml-[300px]">
+            <div class="flex flex-row items-center gap-x-2 mb-[40px]">
+                <p id="additional-text" class="text-[45px] font-medium not-italic mt-[10px] transition-opacity opacity-0">
+
+                </p>
+                <p class="ml-4">
+                    <span id="typing-text" class="typing-text text-blue-500 underline underline-offset-1 text-[70px] font-semibold not-italic transition-opacity opacity-100" >
+                        <script src="./js/textchange.js"></script>
+                    </span>
+                </p>
+            </div>
+            
+        </div>
+
+        
+    </section>
+   
+</body>

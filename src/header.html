@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./tailwind-compiled.css" rel="stylesheet">
+</head>
+<header class="fixed top-0 left-0 right-0 bg-white shadow-md py-4 px-8 z-50">
+    <div class="flex justify-between items-center max-w-7xl mx-auto">
+        <h1 class="text-3xl font-bold text-gray-800">
+            David Mo<span style="text-decoration: underline;">ser</span>
+        </h1>
+
+        <div class="flex gap-6">
+            <a href="https://github.com/damoser1" target="_blank" aria-label="GitHub">
+                <img 
+                    src="./assets/icons/github-mark.png" 
+                    alt="GitHub"
+                    class="h-8 w-8">
+            </a>
+            <a href="https://instagram.com/" target="_blank" aria-label="Instagram">
+                <img 
+                    src="./assets/icons/instagram-icon.png" 
+                    alt="Instagram"
+                    class="h-8 w-8">
+            </a>
+            <a href="https://youtube.com/" target="_blank" aria-label="YouTube">
+                <img 
+                    src="./assets/icons/icon-youtube.png" 
+                    alt="YouTube"
+                    class="h-8 w-8">
+            </a>
+        </div>
+
+        <button
+            onclick="window.location.href='mailto:damoser@schueler.hakzell.at?subject=Betreff&body=Nachrichtentext';"
+            class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
+            Contact Me
+        </button>
+    </div>
+</header>
