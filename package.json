@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "tailwind": "^4.0.0"
+  },
+  "scripts": {
+    "develop": "cd src && live-server --host=localhost",
+    "dev:css": "npx tailwindcss -i ./src/tailwind.css -o ./src/tailwind-compiled.css --watch",
+    "build:css": "npx tailwindcss -i ./src/tailwind.css -o ./src/tailwind-compiled.css --minify"
+  }
+}
