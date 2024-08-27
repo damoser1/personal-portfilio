@@ -30,26 +30,67 @@
             {
                 opacity: 0;
             }
-}
+        }
   </style>
 </head>
 <body>
-    <section class="py-[80px]">
-        <div class="flex flex-col ml-[300px]">
-            <div class="flex flex-row items-center gap-x-2 mb-[40px]">
-                <p id="additional-text" class="text-[45px] font-medium not-italic mt-[10px] transition-opacity opacity-0">
-
+    <section class="py-20 lg:py-[80px]">
+         <div class="flex flex-col lg:ml-[100px] sm:ml-[75px]">
+            <div class="flex sm:flex-row flex-col items-center lg:gap-x-2 mb-10 lg:mb-[40px]">
+                <p id="additional-text" class="text-[20px] lg:text-[45px] font-medium not-italic mt-2 lg:mt-[10px] transition-opacity opacity-0">
+                    <!-- Additional text content here -->
                 </p>
                 <p class="ml-4">
-                    <span id="typing-text" class="typing-text text-blue-500 underline underline-offset-1 text-[70px] font-semibold not-italic transition-opacity opacity-100" >
+                    <span id="typing-text" class="typing-text text-blue-500 underline underline-offset-1 text-[26px] lg:text-[70px] font-semibold not-italic transition-opacity opacity-100">
                         <script src="./js/textchange.js"></script>
                     </span>
                 </p>
             </div>
+            <!-- Profile -->
+            <div class="flex flex-col md:flex-row items-center mb-12 lg:mb-16">
+                <!-- Profile Picture -->
+                <div class="flex-shrink-0">
+                    <img src="./assets/images/david.png" alt="Profile Picture" class="w-28 h-28 lg:w-36 lg:h-36 rounded-full shadow-lg" />
+                </div>
+                <!-- Text Content -->
+                <div class="mt-6 md:mt-0 md:ml-6 lg:md:ml-8 text-center md:text-left">
+                    <p class="text-[26px] lg:text-4xl font-semibold flex items-center justify-center md:justify-start">
+                        Hi there
+                        <span class="ml-2">
+                            <img src="./assets/images/wave.png" alt="wave" class="w-8 h-8 lg:w-10 lg:h-10" />
+                        </span>
+                    </p>
+                    <p class="text-[20px] lg:text-4xl font-semibold mt-2">
+                        I am
+                    </p>
+                    <p class="text-blue-600 text-[30px] lg:text-5xl font-bold">
+                        David Moser
+                    </p>
+                    <p class="bg-blue-600 text-white px-4 lg:px-6 py-2 lg:py-3 mt-3 inline-block text-[16px] lg:text-lg rounded-lg shadow-md">
+                        Web Developer with a focus on Frontend Development
+                    </p>
+                </div>
+            </div>
             
+            <!-- Education -->
+            <div class="flex flex-col items-start mb-12 lg:mb-16 ml-4 lg:ml-5">
+                <p class="text-[26px] lg:text-4xl font-semibold mb-4">
+                    Education
+                </p>
+                <div class="flex flex-col md:flex-row items-center gap-4 lg:gap-6">
+                    <div class="flex-shrink-0">
+                        <img src="./assets/images/education.png" alt="Education Icon" class="w-20 h-20 lg:w-24 lg:h-24" />
+                    </div>
+                    <div>
+                        <p class="text-blue-600 text-[30px] lg:text-4xl font-bold mb-2">
+                            High School Diploma
+                        </p>
+                        <p class="text-[16px] lg:text-lg font-medium">
+                            Currently pursuing my high school diploma with plans to graduate in 2 years.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        
     </section>
-   
 </body>

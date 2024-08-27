@@ -4,7 +4,246 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./tailwind-compiled.css" rel="stylesheet">
+  <style>
+     .transition-opacity {
+            transition: opacity 1s ease;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        .typing-text::after {
+            content: '|';
+            display: inline-block;
+            margin-left: 2px;
+            animation: blink-cursor 1s step-end infinite;
+        }
+
+        @keyframes blink-cursor {
+            0%, 100% 
+            {
+                opacity: 1;
+            }
+            50% 
+            {
+                opacity: 0;
+            }
+        }
+  </style>
 </head>
 <body>
-  
+    <!--header-->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-md py-4 px-8 z-50">
+        <div class="flex flex-col sm:flex-row justify-between items-center max-w-7xl mx-auto px-4">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2 md:mb-0 flex-1">
+                David Mo<span style="text-decoration: underline;">ser</span>
+            </h1>
+        
+            <div class="flex gap-6 mb-2 md:mb-0 flex-wrap flex-1 justify-center md:justify-start">
+                <a href="https://github.com/damoser1" target="_blank" aria-label="GitHub">
+                    <img 
+                        src="./assets/icons/github-mark.png" 
+                        alt="GitHub"
+                        class="h-8 w-8">
+                </a>
+                <a href="https://instagram.com/" target="_blank" aria-label="Instagram">
+                    <img 
+                        src="./assets/icons/instagram-icon.png" 
+                        alt="Instagram"
+                        class="h-8 w-8">
+                </a>
+                <a href="https://youtube.com/" target="_blank" aria-label="YouTube">
+                    <img 
+                        src="./assets/icons/icon-youtube.png" 
+                        alt="YouTube"
+                        class="h-8 w-8">
+                </a>
+            </div>
+        
+            <button
+                onclick="window.location.href='mailto:damoser@schueler.hakzell.at?subject=Betreff&body=Nachrichtentext';"
+                class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition mt-4 sm:mt-0">
+                Contact Me
+            </button>
+        </div>
+    </header>
+    
+<!--introduction-->
+<section class="pt-20 -mb-15">
+  <div class="flex flex-col xl2:ml-[325px] lg:ml-[90px] sm:ml-[50px]">
+     <div class="flex sm:flex-row flex-col items-center lg:gap-x-2 mb-10 lg:mb-[40px]">
+         <p id="additional-text" class="text-[20px] lg:text-[45px] font-medium not-italic mt-2 lg:mt-[10px] transition-opacity opacity-0">
+         </p>
+         <p class="ml-4">
+             <span id="typing-text" class="typing-text text-blue-500 underline underline-offset-1 text-[26px] lg:text-[70px] font-semibold not-italic transition-opacity opacity-100">
+                 <script src="./js/textchange.js"></script>
+             </span>
+         </p>
+     </div>
+     <div class="flex flex-col md:flex-row items-center mb-12 lg:mb-16">
+         <div class="flex-shrink-0">
+             <img src="./assets/images/david.png" alt="Profile Picture" class="w-28 h-28 lg:w-36 lg:h-36 rounded-full shadow-lg" />
+         </div>
+         <div class="mt-6 md:mt-0 md:ml-6 lg:md:ml-8 text-center md:text-left">
+             <p class="text-[26px] lg:text-4xl font-semibold flex items-center justify-center md:justify-start">
+                 Hi there
+                 <span class="ml-2">
+                     <img src="./assets/images/wave.png" alt="wave" class="w-8 h-8 lg:w-10 lg:h-10" />
+                 </span>
+             </p>
+             <p class="text-[20px] lg:text-4xl font-semibold mt-2">
+                 I am
+             </p>
+             <p class="text-blue-600 text-[30px] lg:text-5xl font-bold">
+                 David Moser
+             </p>
+             <p class="bg-blue-600 text-white px-4 lg:px-6 py-2 lg:py-3 mt-3 inline-block text-[16px] lg:text-lg rounded-lg shadow-md">
+                 Web Developer with a focus on Frontend Development
+             </p>
+         </div>
+     </div>
+     
+     <div class="flex flex-col items-start mb-12 lg:mb-16 ml-4 lg:ml-5">
+         <p class="text-[26px] lg:text-4xl font-semibold mb-4">
+             Education
+         </p>
+         <div class="flex flex-col md:flex-row items-center gap-4 lg:gap-6">
+             <div class="flex-shrink-0">
+                 <img src="./assets/images/education.png" alt="Education Icon" class="w-20 h-20 lg:w-24 lg:h-24" />
+             </div>
+             <div>
+                 <p class="text-blue-600 text-[30px] lg:text-4xl font-bold mb-2">
+                     High School Diploma
+                 </p>
+                 <p class="text-[16px] lg:text-lg font-medium">
+                     Currently pursuing my high school diploma with plans to graduate in 2 years.
+                 </p>
+             </div>
+         </div>
+     </div>
+ </div>
+</section>
+<!--skills-->
+  <section class="relative py-20 lg:py-[80px] -mb-20">
+    <img src="./assets/images/gradient-1.svg" alt="" class="absolute inset-0 top-0 left-0 w-full h-auto z-10">
+    
+    <div class="relative w-full h-[1200px] overflow-hidden">
+      <svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 1600 900' class="absolute inset-0 z-0">
+        <rect fill='#3b82f6' width='1600' height='1000'/>
+        <path fill='#4b8ef8' d='M478.4 401c3.2 0.8 6.4 1.7 9.5 2.5c196.2 52.5 388.7 133.5 593.5 176.6c174.2 36.6 349.5 29.2 518.6-10.2V0H0v434.9c52.3-17.6 106.5-27.7 161.1-30.9C268.4 417.4 375.7 434.2 478.4 401z'/>
+        <path fill='#5b9af9' d='M181.8 439.4c98.2 6 191.9 35.2 281.3 72.1c2.8 1.1 5.5 2.3 8.3 3.4c171 71.6 342.7 158.5 531.3 207.7c198.8 51.8 403.4 40.8 597.3-14.8V0H0v403.2C59 383.6 120.6 375.7 181.8 439.4z'/>
+        <path fill='#6ba5fb' d='M454.9 246.3C600.7 337 751.6 429.3 924.1 485c208.6 67.4 431.3 60.8 637.9-5.3c12.8-4.1 25.4-8.4 38.1-12.9V0H288.1c56 21.3 108.7 50.6 159.7 82C450.2 203.4 452.5 204.9 454.9 246.3z'/>
+        <path fill='#7ab1fc' d='M1397.5 314.8c47.2-10.6 93.6-25.3 138.6-43.8c21.7-8.9 43-18.8 63.9-29.5V0H643.4c62.9 41.7 129.7 78.2 202.1 107.4C1020.4 338.1 1214.2 356.1 1397.5 314.8z'/>
+      </svg>
+      
+      <div class="absolute inset-0 flex flex-col items-center justify-center gap-10 z-20">
+        <h1 class="text-4xl lg:text-[70px] text-white mb-10 text-center">My Skills</h1>
+        <div class="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20">
+          <div class="relative py-10 lg:py-20 px-6 lg:px-10 bg-transparent border border-[#2b5dff] backdrop-blur-lg rounded-lg shadow-lg transition duration-300 ease-in-out w-full max-w-xs sm:max-w-sm lg:max-w-lg lg:h-[350px] hover:bg-[#2b5dff]/10 hover:shadow-lg">
+            <h2 class="text-xl lg:text-2xl font-bold mb-4 lg:mb-6 text-white">Front-end Design</h2>
+            <ul class="list-disc pl-5 text-white text-base lg:text-lg">
+              <li>HTML, CSS, JavaScript, Flutter</li>
+              <li>Tailwind, Bootstrap</li>
+              <li>Responsive UI/UX Design</li>
+              <li>Wireframe Design (Figma, Adobe-XD)</li>
+            </ul>
+          </div>
+          <div class="relative py-10 lg:py-20 px-6 lg:px-10 bg-transparent border border-[#2b5dff] backdrop-blur-lg rounded-lg shadow-lg transition duration-300 ease-in-out w-full max-w-xs sm:max-w-sm lg:max-w-lg lg:h-[350px] hover:bg-[#2b5dff]/10 hover:shadow-lg">
+            <h2 class="text-xl lg:text-2xl font-bold mb-4 lg:mb-6 text-white">Back-end Engineering</h2>
+            <ul class="list-disc pl-5 text-white text-base lg:text-lg">
+              <li>JavaScript</li>
+              <li>C#</li>
+              <li>Go</li>
+              <li>PHP</li>
+            </ul>
+          </div>
+          <div class="relative py-10 lg:py-20 px-6 lg:px-14 bg-transparent border border-[#2b5dff] backdrop-blur-lg rounded-lg shadow-lg transition duration-300 ease-in-out w-full max-w-xs sm:max-w-sm lg:max-w-lg lg:h-[350px] hover:bg-[#2b5dff]/10 hover:shadow-lg">
+            <h2 class="text-xl lg:text-2xl font-bold mb-4 lg:mb-6 text-white">Databases</h2>
+            <ul class="list-disc pl-5 text-white text-base lg:text-lg">
+              <li>MySQL</li>
+              <li>SQLite</li>
+              <li>phpMyAdmin</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <img src="./assets/images/gradient-2.svg" alt="" class="absolute bottom-[-50px] left-0 w-full h-auto z-10">
+  </section>
+  <!--portfolio-->
+  <section class="py-20 bg-gradient-to-b from-gray-800 to-black text-white">
+    <div class="flex flex-col text-center items-center mb-16">
+        <h2 class="text-[70px] font-bold mb-4">What I Do</h2>
+        <p class="text-[20px] text-gray-300">I am a passionate web developer focused on modern technologies and solutions.</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-10 px-4">
+        <div class="relative p-10 bg-[#2b5dff]/20 border border-[#2b5dff] backdrop-blur-lg rounded-xl shadow-2xl transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-[#1d4ed8]/30 w-full max-w-xs sm:max-w-sm lg:max-w-md">
+            <div class="flex justify-center mb-6">
+                <img src="./assets/icons/coding-icon-1.png" alt="" class="w-[80px] h-[80px]" />
+            </div>
+            <h3 class="text-[30px] font-bold text-center mb-4">Full Stack WordPress Developer</h3>
+            <p class="text-[16px] text-center text-gray-200">I create custom WordPress websites tailored to your specific needs. With expertise in PHP, HTML, and TailwindCSS, I can build engaging, functional, and high-performance websites.</p>
+        </div>
+        <div class="relative p-10 bg-[#2b5dff]/20 border border-[#2b5dff] backdrop-blur-lg rounded-xl shadow-2xl transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-[#1d4ed8]/30 w-full max-w-xs sm:max-w-sm lg:max-w-md">
+            <div class="flex justify-center mb-6">
+                <img src="./assets/icons/backend-entwicklung.png" alt="" class="w-[80px] h-[80px]" />
+            </div>
+            <h3 class="text-[30px] font-bold text-center mb-4 mt-10">PHP & HTML Specialist</h3>
+            <p class="text-[16px] text-center text-gray-200 mt-10">I specialize in PHP and HTML, using these skills to develop robust back-end solutions and user-friendly front-end designs. My goal is to create high-quality web applications that meet your requirements.</p>
+        </div>
+        <div class="relative p-10 bg-[#2b5dff]/20 border border-[#2b5dff] backdrop-blur-lg rounded-xl shadow-2xl transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-[#1d4ed8]/30 w-full max-w-xs sm:max-w-sm lg:max-w-md">
+            <div class="flex justify-center mb-6">
+                <img src="./assets/icons/coding-icon-2.png" alt="" class="w-[60px] h-[60px]" />
+            </div>
+            <h3 class="text-[30px] font-bold text-center mb-4 mt-10">TailwindCSS Enthusiast</h3>
+            <p class="text-[16px] text-center text-gray-200 mt-10">I use TailwindCSS to craft stylish, responsive, and modern user interfaces. The flexible and powerful utility-first framework allows me to efficiently develop visually appealing designs.</p>
+        </div>
+    </div>
+
+    <div class="flex flex-col  items-center mt-20">
+        <div class="text-center mb-16">
+            <h2 class="text-[70px] font-bold mb-4">Portfolio</h2>
+            <p class="text-[20px] text-gray-300">Here are a few samples of my previous work</p>
+        </div>
+        <div class="flex flex-wrap justify-center lg:justify-between gap-10 px-4">
+            <div class="relative p-10 bg-[#2b5dff]/20 border border-[#2b5dff] backdrop-blur-lg rounded-xl shadow-2xl transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-[#1d4ed8]/30 w-full max-w-xs sm:max-w-sm lg:max-w-md">
+                <img src="./assets/images/hotel-alpbacherhof.png" alt="" class="w-full h-[250px] mb-6 rounded-lg" />
+                <h3 class="text-[30px] font-bold text-center mb-4">Alpbacherhof</h3>
+                <p class="text-[16px] text-center text-gray-200 mb-10 ">
+                    Me and the team designed a new website for Alpbacherhof, capturing its blend of traditional alpine charm and modern luxury against a stunning mountain backdrop.
+                </p>
+                <a href="https://www.alpina-holiday.at/de/alpina-holiday-apartments.html" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-full flex items-center justify-center uppercase">
+                    Click here
+                </a>
+            </div>
+            <div class="relative p-10 bg-[#2b5dff]/20 border border-[#2b5dff] backdrop-blur-lg rounded-xl shadow-2xl transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-[#1d4ed8]/30 w-full max-w-xs sm:max-w-sm lg:max-w-md">
+                <img src="./assets/images/alpina.png" alt="" class="w-full h-[250px] mb-6 rounded-lg" />
+                <h3 class="text-[30px] font-bold text-center mb-4 ">Alpina</h3>
+                <p class="text-[16px] text-center text-gray-200 mb-10">
+                    Me and the team developed a new website for Alpina, highlighting its elegant design and seamless integration of modern aesthetics with luxurious functionality.
+                </p>
+                <a href="https://www.alpina-holiday.at/de/alpina-holiday-apartments.html" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-full flex items-center justify-center uppercase">
+                    Click here
+                </a>
+            </div>                                                                                                                                                                                                   
+        </div>
+    </div>
+    <div class="flex flex-col items-center mt-20">
+        <div class="text-center mb-16">
+            <h2 class="text-[70px] font-bold mb-4">Contact</h2>
+            <p class="text-[20px] text-gray-300">Lets get in Touch and work together</p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-10 px-4">
+            <div class="relative p-10 bg-[#2b5dff]/20 border border-[#2b5dff] backdrop-blur-lg rounded-xl shadow-2xl transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-[#1d4ed8]/30 w-full max-w-xs sm:max-w-sm lg:max-w-md">
+                <a href="mailto:damoser@schueler.hakzell.at?subject=Betreff&body=Nachrichtentext" class="flex flex-col items-center">
+                    <img src="./assets/icons/email.png" alt="Email Icon" class="w-[60px] h-[60px] mb-6 rounded-lg" />
+                    <h3 class="text-[30px] font-bold text-center mb-4">Email</h3>
+                    <p class="text-[16px] text-center text-gray-200 mb-4">damoser@schueler.hakzell.at</p>
+                </a>                                                                                                                                                                           
+            </div>
+    </div>
+</section>
 </body>
