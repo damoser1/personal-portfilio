@@ -21,7 +21,7 @@ function resetTypewriter() {
     
     const additionalTextElement = document.getElementById("additional-text");
     additionalTextElement.innerText = additionalTexts[textIndex];
-    additionalTextElement.style.opacity = 1; // Ensure the additional text is visible
+    additionalTextElement.style.opacity = 1;
 
     typeWriterEffect();
 }
@@ -29,7 +29,7 @@ function resetTypewriter() {
 document.addEventListener("DOMContentLoaded", () => {
     const additionalTextElement = document.getElementById("additional-text");
     additionalTextElement.innerText = additionalTexts[0];
-    additionalTextElement.style.opacity = 1; // Make the text visible from the start
+    additionalTextElement.style.opacity = 1;
 
     typeWriterEffect();
 });
